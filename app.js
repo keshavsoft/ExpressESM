@@ -4,6 +4,9 @@ import { StartFunc as StartFuncKWSServer } from "./Projects/KWSServer/EntryFile.
 
 import { StartFunc as StartFuncKLowDb } from "./KLowDb/read.js";
 
+import { router as routerImageUpload } from "./routes/ImageUpload.js";
+
+
 // require('dotenv').config();
 
 // const express = require('express');
@@ -32,7 +35,7 @@ app.get('/k1', (req, res) => {
     res.json("k1");
 });
 
-
+app.use('/profile', routerImageUpload);
 
 app.use('/', express.static(path.join(path.resolve(), 'public')))
 
