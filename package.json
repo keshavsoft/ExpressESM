@@ -19,6 +19,8 @@
   "homepage": "https://github.com/keshavsoft/ExpressESM#readme",
   "dependencies": {
     "cookie-parser": "^1.4.6",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "lowdb": "^6.1.1",
+    "ws": "^8.15.1"
   }
 }
