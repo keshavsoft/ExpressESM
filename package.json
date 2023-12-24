@@ -2,10 +2,11 @@
   "name": "expressesm",
   "version": "1.0.0",
   "description": "express with esm",
-  "main": "PortListen.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
   },
   "repository": {
     "type": "git",
