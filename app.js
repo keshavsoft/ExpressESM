@@ -30,6 +30,8 @@ app.use(cookieParser());
 
 app.use(express.json({ limit: '100mb' }));
 
+app.use('/', express.static(path.join(path.resolve(), 'public')))
+
 app.get('/', (req, res) => {
     res.json("kkhhhhhhh")
 });
@@ -42,8 +44,6 @@ app.get('/k1', (req, res) => {
 app.use('/profile', routerImageUpload);
 app.use('/admin', routerAdmin);
 app.use('/login', routerlogin);
-
-app.use('/', express.static(path.join(path.resolve(), 'public')))
 
 StartFuncKWSServer(server);
 
