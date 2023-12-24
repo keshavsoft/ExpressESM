@@ -6,6 +6,7 @@ import { StartFunc as StartFuncKLowDb } from "./KLowDb/read.js";
 
 import { router as routerImageUpload } from "./routes/ImageUpload.js";
 import { router as routerlogin } from "./routes/login.js";
+import { router as routerAdmin } from "./routes/admin.js";
 
 // require('dotenv').config();
 
@@ -14,7 +15,8 @@ import express from 'express';
 import http from 'http';
 import path from 'path';
 import cookieParser from 'cookie-parser';
-
+import dotenv from 'dotenv';
+dotenv.config();
 
 // const http = require('http');
 const app = express();
@@ -26,6 +28,8 @@ var port = normalizePort(process.env.PORT || '3000');
 
 app.use(cookieParser());
 
+app.use(express.json({ limit: '100mb' }));
+
 app.get('/', (req, res) => {
     res.json("kkhhhhhhh")
 });
@@ -36,11 +40,10 @@ app.get('/k1', (req, res) => {
 });
 
 app.use('/profile', routerImageUpload);
+app.use('/admin', routerAdmin);
 app.use('/login', routerlogin);
 
 app.use('/', express.static(path.join(path.resolve(), 'public')))
-
-app.use(express.json({ limit: '100mb' }));
 
 StartFuncKWSServer(server);
 
