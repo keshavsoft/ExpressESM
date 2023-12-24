@@ -6,4 +6,21 @@ let CreateToken = ({ inPassword }) => {
     return token;
 };
 
-export { CreateToken };
+let VerifyToken = (req, res, next) => {
+    let LocalToken = process.env.KS_TOKEN_FORADMIN;
+    let LocalTokenFromCookie = req.cookies.KToken;
+    var decoded = jwt.verify(LocalTokenFromCookie, LocalToken);
+    console.log("decoded : ", decoded);
+    next();
+    // return decoded;
+};
+
+let RedirectToLogin = (req, res, next) => {
+    if ("KToken" in req.cookies) {
+        VerifyToken(req, res, next);
+    } else {
+        res.sendStatus(403);
+    };
+};
+
+export { CreateToken, RedirectToLogin };
