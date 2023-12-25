@@ -13,6 +13,8 @@ let StartFunc = async () => {
 
     const defaultData = { error: "From KLowDb" }
     const db = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData)
+    const ss = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData);
+    console.log("ss",ss);
 
     LocalReturnData.JsonData = db.data;
     LocalReturnData.KTF = true;
