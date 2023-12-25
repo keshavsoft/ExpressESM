@@ -6,11 +6,10 @@ let GetFunc = async (req, res) => {
     res.status(200).json(LocalFromRepo);
 };
 
-let PostFunc = (req, res) => {
+let PostFunc = async (req, res) => {
+    let LocalFromRepo = await PostFuncRepo();
 
-    let LocalFromRepo = PostFuncRepo();
     res.status(200).json(LocalFromRepo);
-
 };
 
 export { GetFunc, PostFunc };

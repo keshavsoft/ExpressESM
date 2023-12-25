@@ -4,9 +4,8 @@ let GetFuncRepo = async () => {
     return await GetFuncDal();
 };
 
-let PostFuncRepo = () => {
-
-    return PostFuncDal();
+let PostFuncRepo = async () => {
+    return await PostFuncDal();
 };
 
 export { GetFuncRepo, PostFuncRepo };
