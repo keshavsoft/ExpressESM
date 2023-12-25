@@ -28,7 +28,7 @@ let StartFuncSync = () => {
     LocalReturnData = { ...LocalFromCheck };
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${LocalReturnData.JsonFolderPath}/316/Generate.json`;
+    LocalReturnData.UserDataFilePath = `${LocalReturnData.JsonFolderPath}/316/Customers.json`;
 
     const defaultData = { error: "From KLowDb" }
     const db = JSONSyncPreset(LocalReturnData.UserDataFilePath, defaultData)
