@@ -14,10 +14,11 @@ let StartFunc = async ({ inDataToInsert }) => {
     LocalReturnData.UserDataFilePath = `${LocalReturnData.JsonFolderPath}/316/Customers.json`;
 
     const defaultData = { error: "From KLowDb" }
-    const db = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData)
-    db.data.push(inDataToInsert);
+    const db = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData);
+    const LocalupdatedArray = await LocalSyncUpdateObject(db.data, inDataToInsert.uuidv4, inDataToInsert);
+
+    db.data = LocalupdatedArray;
     let k1 = await db.write();
-    // LocalReturnData.JsonData = db.data;
     LocalReturnData.KTF = true;
 
     return await LocalReturnData;
@@ -35,22 +36,42 @@ let StartFuncNoSync = ({ inDataToInsert }) => {
     const defaultData = { error: "From KLowDb" };
 
     const db = JSONSyncPreset(LocalReturnData.UserDataFilePath, defaultData);
-
-    console.log("db.data:",db.data);
-
-    // CustomerName
-    // db.data.forEach(element => {
-    //     element.CustomerName
-        
-    // });
-
-    // const db = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData)
-    // db.data.push(inDataToInsert);
-    // db.write();
-    // LocalReturnData.JsonData = db.data;
+    let LocalupdatedArray = LocalNoSyncUpdateObject(db.data, inDataToInsert.uuidv4, inDataToInsert);
+    db.data = LocalupdatedArray;
+    db.write();
+    LocalReturnData.JsonData = db.data;
     LocalReturnData.KTF = true;
 
     return LocalReturnData;
 };
+
+let LocalNoSyncUpdateObject = (array, idToUpdate, updatedObject) => {
+    const updatedArray = array.map(obj => {
+        if (obj.uuidv4 == idToUpdate) {
+            // Update the matching object
+            return { ...obj, ...updatedObject };
+        }
+        // Keep other objects unchanged
+        return obj;
+    });
+
+    return updatedArray;
+}
+
+let LocalSyncUpdateObject = async (array, idToUpdate, updatedObject) => {
+    const updatedArray = array.map(obj => {
+        if (obj.uuidv4 == idToUpdate) {
+            // Update the matching object
+            return { ...obj, ...updatedObject };
+        }
+        // Keep other objects unchanged
+        return obj;
+    });
+
+    return updatedArray;
+}
+
+
+
 
 export { StartFunc, StartFuncNoSync };

@@ -3,7 +3,8 @@ content-type: application/json
 
 {
     "inDataToInsert":{
-        "CustomerName":"Sree",
-        "CustomerContact:":8341177
+    "uuidv4":"c6764683-b5b9-46e4-b4aa-644b792a8478",
+        "CustomerName":"Raja---",
+        "CustomerContact:":111
     }
 }
