@@ -3,8 +3,16 @@ import { StartFuncSync as StartFuncKLowDb } from '../../../KLowDb/KData/JSON/Use
 import { StartFuncNoSync as StartFuncWriteFile } from '../../../KLowDb/KData/JSON/UserData/CustomersJsonFile/WriteFile.js';
 import { StartFuncNoSync as StartFuncUpdateFile } from '../../../KLowDb/KData/JSON/UserData/CustomersJsonFile/UpdateFile.js';
 
-let GetFuncDal = () => {
-    return StartFuncKLowDb();
+import { StartFunc as StartFuncKSequelizeReadFile } from '../../../KSequelize/KData/JSON/UserData/CustomersJsonFile/ReadFile.js';
+
+let GetFuncDal = ({ FromJson, FromSqlite }) => {
+    if (FromJson) {
+        return StartFuncKLowDb();
+    };
+
+    if (FromSqlite) {
+        return StartFuncKSequelizeReadFile();
+    }
 };
 
 let PostFuncDal = ({ inDataToInsert }) => {
