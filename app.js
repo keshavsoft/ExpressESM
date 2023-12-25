@@ -1,8 +1,8 @@
 // let CommonForWebSocketStart = require("./Projects/KWSServer/EntryFile");
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
-import { StartFunc as StartFuncKWSServer } from "./Projects/KWSServer/EntryFile.js";
+// import { StartFunc as StartFuncKWSServer } from "./Projects/KWSServer/EntryFile.js";
 
-import { StartFunc as StartFuncKLowDb } from "./KLowDb/read.js";
+// import { StartFunc as StartFuncKLowDb } from "./KLowDb/read.js";
 
 import { router as routerImageUpload } from "./routes/ImageUpload.js";
 import { router as routerlogin } from "./routes/login.js";
@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/k1', (req, res) => {
-    StartFuncKLowDb().then();
+    // StartFuncKLowDb().then();
     res.json("k1");
 });
 
@@ -47,7 +47,7 @@ app.use('/admin', routerAdmin);
 app.use('/login', routerlogin);
 app.use('/Projects', routerProjects);
 
-StartFuncKWSServer(server);
+// StartFuncKWSServer(server);
 
 function normalizePort(val) {
     var port = parseInt(val, 10);
