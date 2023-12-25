@@ -1,5 +1,5 @@
-import CommonMock from '../../../../MockAllow.json'  assert { type: 'json' };
-import { ForExistence as ForExistenceCheckFile } from './CheckFile.js';
+import CommonMock from '../../../MockAllow.json'  assert { type: 'json' };
+import { ForExistence as ForExistenceCheckFile } from '../CheckJsonFolder.js';
 import { JSONPreset } from 'lowdb/node';
 
 let StartFunc = async () => {
@@ -9,15 +9,15 @@ let StartFunc = async () => {
     LocalReturnData = { ...LocalFromCheck };
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${LocalReturnData.LoginFolderPath}/UserData.json`;
+    LocalReturnData.UserDataFilePath = `${LocalReturnData.JsonFolderPath}/316/Customers.json`;
 
-    const defaultData = { posts: [] }
+    const defaultData = { error: "From KLowDb" }
     const db = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData)
 
-    LocalReturnData.JsonData = db.data.data;
+    LocalReturnData.JsonData = db.data;
     LocalReturnData.KTF = true;
 
-    return LocalReturnData;
+    return await LocalReturnData;
 };
 
 if (CommonMock.AllowMock) {

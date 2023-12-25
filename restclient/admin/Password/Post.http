@@ -2,5 +2,5 @@ POST http://localhost:3000/admin/Password
 content-type: application/json
  
 {   
-    "password":"kkkkkkkkkkkk"
+    "password":"sree"
 }
