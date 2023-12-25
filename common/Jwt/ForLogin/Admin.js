@@ -1,6 +1,11 @@
 import jwt from 'jsonwebtoken';
 
 let CreateToken = ({ inPassword }) => {
+    if ("KS_TOKEN_FORADMIN" in process.env === false) {
+        console.log("KS_TOKEN_FORADMIN not found in evn");
+        return false;
+    };
+    
     let LocalToken = process.env.KS_TOKEN_FORADMIN;
     var token = jwt.sign({ Password: inPassword }, LocalToken);
     return token;

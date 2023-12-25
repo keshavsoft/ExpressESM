@@ -7,6 +7,7 @@ import { StartFunc as StartFuncKLowDb } from "./KLowDb/read.js";
 import { router as routerImageUpload } from "./routes/ImageUpload.js";
 import { router as routerlogin } from "./routes/login.js";
 import { router as routerAdmin } from "./routes/admin.js";
+import { router as routerProjects } from "./routes/Projects.js";
 
 // require('dotenv').config();
 
@@ -44,6 +45,7 @@ app.get('/k1', (req, res) => {
 app.use('/profile', routerImageUpload);
 app.use('/admin', routerAdmin);
 app.use('/login', routerlogin);
+app.use('/Projects', routerProjects);
 
 StartFuncKWSServer(server);
 
