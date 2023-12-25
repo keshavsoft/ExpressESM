@@ -1,4 +1,4 @@
-import { GetFuncRepo, PostFuncRepo } from '../../../Repo/projects/Quotation/Customers.js';
+import { GetFuncRepo, PostFuncRepo,PatchFuncRepo } from '../../../Repo/projects/Quotation/Customers.js';
 
 let GetFunc = async (req, res) => {
     let LocalFromRepo = await GetFuncRepo();
@@ -13,4 +13,11 @@ let PostFunc = (req, res) => {
     res.status(200).json(LocalFromRepo);
 };
 
-export { GetFunc, PostFunc };
+let PatchFunc = (req, res) => {
+    let LocalinDataToInsert = req.body.inDataToInsert;
+    let LocalFromRepo = PatchFuncRepo({ inDataToInsert: LocalinDataToInsert });
+
+    res.status(200).json(LocalFromRepo);
+};
+
+export { GetFunc, PostFunc, PatchFunc };
