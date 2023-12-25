@@ -6,14 +6,9 @@ let GetFuncDal = () => {
     return StartFuncKLowDb();
 };
 
-let PostFuncDal = () => {
-    return StartFuncWriteFile({
-        inDataToInsert: {
-            CustomerName: "Chakri"
-        }
-    });
+let PostFuncDal = ({inDataToInsert}) => {
+    return StartFuncWriteFile({ inDataToInsert });
 
-    return "Post From Dal"
 };
 
 export { GetFuncDal, PostFuncDal };

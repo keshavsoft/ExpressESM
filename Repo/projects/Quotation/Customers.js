@@ -4,8 +4,8 @@ let GetFuncRepo = async () => {
     return await GetFuncDal();
 };
 
-let PostFuncRepo = async () => {
-    return await PostFuncDal();
+let PostFuncRepo = ({ inDataToInsert }) => {
+    return PostFuncDal({ inDataToInsert });
 };
 
 export { GetFuncRepo, PostFuncRepo };
