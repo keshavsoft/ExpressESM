@@ -1,0 +1,9 @@
+POST  http://localhost:3000/Projects/Quotation/Orders
+content-type: application/json
+
+{
+    "inDataToInsert":{
+        "OrderaName":"Sree",
+        "Qty:":8
+    }
+}
