@@ -1,5 +1,6 @@
 
 let StartFunc = ({ inDataToShow }) => {
+    console.log("inDataToShow:",inDataToShow);
 
     if (document.getElementById('products-list')) {
 

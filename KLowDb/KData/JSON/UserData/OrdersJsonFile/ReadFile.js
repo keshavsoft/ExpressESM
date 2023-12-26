@@ -1,5 +1,5 @@
 import CommonMock from '../../../../MockAllow.json'  assert { type: 'json' };
-import { ForExistence as ForExistenceCheckFile } from '../../CheckJsonFolder.js';
+import { ForExistence as ForExistenceCheckFile } from '../CheckDataPkFolder.js';
 import { JSONPreset } from 'lowdb/node';
 import { JSONSyncPreset } from 'lowdb/node'
 
@@ -10,7 +10,7 @@ let StartFunc = async () => {
     LocalReturnData = { ...LocalFromCheck };
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${LocalReturnData.JsonFolderPath}/316/Orders.json`;
+    LocalReturnData.UserDataFilePath = `${LocalReturnData.DataPkFolderPath}/Orders.json`;
 
     const defaultData = { error: "From KLowDb" }
     const db = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData)
@@ -28,7 +28,7 @@ let StartFuncSync = () => {
     LocalReturnData = { ...LocalFromCheck };
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${LocalReturnData.JsonFolderPath}/316/Orders.json`;
+    LocalReturnData.UserDataFilePath = `${LocalReturnData.DataPkFolderPath}/Orders.json`;
 
     const defaultData = { error: "From KLowDb" }
     const db = JSONSyncPreset(LocalReturnData.UserDataFilePath, defaultData)

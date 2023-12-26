@@ -1,4 +1,4 @@
-import { GetFuncDal, PostFuncDal } from '../../../Dal/projects/Quotation/Items.js';
+import { GetFuncDal, PostFuncDal, PatchFuncDal } from '../../../Dal/projects/Quotation/Items.js';
 
 let GetFuncRepo = () => {
     return GetFuncDal();
@@ -8,4 +8,8 @@ let PostFuncRepo = ({ inDataToInsert }) => {
     return PostFuncDal({ inDataToInsert });
 };
 
-export { GetFuncRepo, PostFuncRepo };
+let PatchFuncRepo = ({ inDataToInsert }) => {
+    return PatchFuncDal({ inDataToInsert });
+};
+
+export { GetFuncRepo, PostFuncRepo, PatchFuncRepo };
