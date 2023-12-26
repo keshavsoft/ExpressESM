@@ -6,13 +6,5 @@
   {
     "ItemName": "samsung",
     "ItemRate": 10000
-  },
-  {
-    "ItemName": "sree",
-    "ItemRate": 20
-  },
-  {
-    "ItemName": "iphone",
-    "ItemRate": 50000
   }
 ]
