@@ -2,8 +2,8 @@ import express from 'express';
 
 var router = express.Router();
 
-import { PostFunc } from '../../controllers/admin/SetUp.Controller.js';
+import { GetFunc } from '../../controllers/admin/SetUp.Controller.js';
 
-router.post('/', PostFunc);
+router.get('/', GetFunc);
 
 export { router };

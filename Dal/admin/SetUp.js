@@ -1,8 +1,15 @@
 import { PostFunc as PostFuncToLowDb } from '../../KLowDb';
 
-let PostFunc = () => {
+let GetFunc = ({ FromJson, FromSqlite }) => {
 
-  return PostFuncToLowDb();
+  if (FromJson) {
+    return StartFuncKLowDb();
 };
 
-export { PostFunc };
+if (FromSqlite) {
+    return StartFuncKSequelizeReadFile();
+}
+
+};
+
+export { GetFunc };

@@ -1,10 +1,10 @@
-import { PostFunc as PostFuncRepo } from "../../Repo/admin/SetUp.js";
+import { GetFunc as GetFuncRepo } from "../../Repo/admin/SetUp.js";
 
-let PostFunc = (req, res) => {
+let GetFunc = (req, res) => {
 
-    let ResponseData = PostFuncRepo();
+    let ResponseData = GetFuncRepo();
 
     res.status(200).json(ResponseData);
 };
 
-export { PostFunc };
+export { GetFunc };
