@@ -1,4 +1,4 @@
-import { StartFunc as StartFuncKLowDb } from '../../../KLowDb/KData/JSON/UserData/ReadFile.js';
+import { StartFunc as StartFuncKLowDb } from '../../../KLowDb/KData/JSON/UserData/SetUp.js';
 
 let GetFuncDal = async () => {
     return await StartFuncKLowDb();

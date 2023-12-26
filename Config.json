@@ -1,4 +1,4 @@
 {
-    "FromJson": false,
-    "FromSqlite": true
+    "FromJson": true,
+    "FromSqlite": false
 }
