@@ -1,7 +1,10 @@
-import { PostFunc as PostFuncDal } from '../../Dal/admin/SetUp.js';
+import { GetFunc as GetFuncDal } from '../../Dal/admin/SetUp.js';
 
-let PostFunc = () => {
-    return PostFuncDal();
+let GetFunc = () => {
+    return GetFuncDal({
+        FromJson: Config.FromJson,
+        FromSqlite: Config.FromSqlite
+    });
 };
 
-export { PostFunc };
+export { GetFunc };
