@@ -1,25 +1,6 @@
 import CommonMock from '../../../../MockAllow.json'  assert { type: 'json' };
-import { ForExistence as ForExistenceCheckFile } from '../../CheckJsonFolder.js';
-import { JSONPreset } from 'lowdb/node';
+import { ForExistence as ForExistenceCheckFile } from '../CheckDataPkFolder.js';
 import { JSONSyncPreset } from 'lowdb/node'
-
-let StartFunc = async () => {
-    let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
-    let LocalFromCheck = ForExistenceCheckFile();
-
-    LocalReturnData = { ...LocalFromCheck };
-    LocalReturnData.KTF = false;
-
-    LocalReturnData.UserDataFilePath = `${LocalReturnData.JsonFolderPath}/316/Customers.json`;
-
-    const defaultData = { error: "From KLowDb" }
-    const db = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData)
-
-    LocalReturnData.JsonData = db.data;
-    LocalReturnData.KTF = true;
-
-    return await LocalReturnData;
-};
 
 let StartFuncSync = () => {
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
@@ -28,7 +9,7 @@ let StartFuncSync = () => {
     LocalReturnData = { ...LocalFromCheck };
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${LocalReturnData.JsonFolderPath}/316/Customers.json`;
+    LocalReturnData.UserDataFilePath = `${LocalReturnData.DataPkFolderPath}/Customers.json`;
 
     const defaultData = { error: "From KLowDb" }
     const db = JSONSyncPreset(LocalReturnData.UserDataFilePath, defaultData)
@@ -48,4 +29,4 @@ if (CommonMock.AllowMock) {
     };
 };
 
-export { StartFunc, StartFuncSync };
+export { StartFuncSync };
