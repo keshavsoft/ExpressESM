@@ -1,16 +1,14 @@
+let CommonTableId = "products-list";
 
 let StartFunc = ({ inDataToShow }) => {
-    console.log("inDataToShow:",inDataToShow);
-
-    if (document.getElementById('products-list')) {
-
-        const dataTableSearch = new simpleDatatables.DataTable("#products-list", {
+    if (document.getElementById(CommonTableId)) {
+        const dataTableSearch = new simpleDatatables.DataTable(`#${CommonTableId}`, {
             searchable: false,
             fixedHeight: true,
             perPage: 5,
             data: {
-                headings: Object.keys(inDataToShow[0]),
-                data: inDataToShow.map(item => Object.values(item))
+                headings: ["ItemName", "ItemRate"],
+                data: LocalFuncPrepareRows({ inDataToShow })
             }
         });
 
@@ -33,6 +31,8 @@ let StartFunc = ({ inDataToShow }) => {
     };
 };
 
-
+let LocalFuncPrepareRows = ({ inDataToShow }) => {
+    return inDataToShow.map(item => Object.values((({ ItemName, ItemRate }) => ({ ItemName, ItemRate }))(item)))
+};
 
 export { StartFunc }
