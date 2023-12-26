@@ -1,5 +1,4 @@
 import fs from 'fs'
-import CommonMock from '../../MockAllow.json'  assert { type: 'json' };
 import { ForExistence as ForExistenceCheckKData } from '../CheckJsonFolder.js';
 
 let ForExistence = () => {
@@ -24,11 +23,5 @@ let ForExistence = () => {
     return LocalReturnData;
 };
 
-if (CommonMock.AllowMock) {
-    if (CommonMock.MockKey === "K25") {
-        let LocalFromFunc = ForExistence();
-        console.log("LocalFromFunc : ", LocalFromFunc);
-    };
-};
 
 export { ForExistence };
