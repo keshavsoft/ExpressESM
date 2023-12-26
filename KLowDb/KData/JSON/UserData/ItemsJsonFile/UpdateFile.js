@@ -14,10 +14,11 @@ let StartFunc = async ({ inDataToInsert }) => {
     LocalReturnData.UserDataFilePath = `${LocalReturnData.DataPkFolderPath}/Customers.json`;
 
     const defaultData = { error: "From KLowDb" }
-    const db = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData)
-    db.data.push(inDataToInsert);
+    const db = await JSONPreset(LocalReturnData.UserDataFilePath, defaultData);
+    const LocalupdatedArray = await LocalSyncUpdateObject(db.data, inDataToInsert.uuidv4, inDataToInsert);
+
+    db.data = LocalupdatedArray;
     let k1 = await db.write();
-    // LocalReturnData.JsonData = db.data;
     LocalReturnData.KTF = true;
 
     return await LocalReturnData;
@@ -35,34 +36,42 @@ let StartFuncNoSync = ({ inDataToInsert }) => {
     const defaultData = { error: "From KLowDb" };
 
     const db = JSONSyncPreset(LocalReturnData.UserDataFilePath, defaultData);
-    let LocalinDataToInsert = LocalFunc({ inDataToInsert });
-
-    db.data.push(LocalinDataToInsert);
+    let LocalupdatedArray = LocalNoSyncUpdateObject(db.data, inDataToInsert.uuidv4, inDataToInsert);
+    db.data = LocalupdatedArray;
     db.write();
+    LocalReturnData.JsonData = db.data;
     LocalReturnData.KTF = true;
 
     return LocalReturnData;
 };
 
-const LocalFunc = ({ inDataToInsert }) => {
-
-    let LocalReturnData = { ...inDataToInsert, uuidv4: uuidv4(), DateTime: Timestamp() };
-    return LocalReturnData
-};
-
-const Timestamp = () => {
-
-    let currentDate = new Date();
-    let formattedDate = currentDate.toISOString();
-
-    return formattedDate;
-};
-
-function uuidv4() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
+let LocalNoSyncUpdateObject = (array, idToUpdate, updatedObject) => {
+    const updatedArray = array.map(obj => {
+        if (obj.uuidv4 == idToUpdate) {
+            // Update the matching object
+            return { ...obj, ...updatedObject };
+        }
+        // Keep other objects unchanged
+        return obj;
     });
-};
+
+    return updatedArray;
+}
+
+let LocalSyncUpdateObject = async (array, idToUpdate, updatedObject) => {
+    const updatedArray = array.map(obj => {
+        if (obj.uuidv4 == idToUpdate) {
+            // Update the matching object
+            return { ...obj, ...updatedObject };
+        }
+        // Keep other objects unchanged
+        return obj;
+    });
+
+    return updatedArray;
+}
+
+
+
 
 export { StartFunc, StartFuncNoSync };
