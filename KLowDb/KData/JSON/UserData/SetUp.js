@@ -13,8 +13,6 @@ let StartFunc = () => {
         let LocalFromPath = `${LocalReturnData.KDataFolderPath}/TemplateDatas/ForLowDb/316`;
 
         if (fs.existsSync(LocalFolderPath)) {
-            LocalReturnData.KReason = "Data is already present on the server";
-        } else {
             fs.copySync(LocalFromPath, LocalFolderPath);
 
             LocalReturnData.KTF = true;
