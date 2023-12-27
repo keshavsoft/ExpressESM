@@ -6,7 +6,7 @@ import { GetFunc, PostFunc, PatchFunc } from '../../../controllers/projects/Quot
 
 router.get('/', GetFunc);
 router.post('/', PostFunc);
-router.patch('/', PatchFunc);
+router.patch('/:ParamUuId', PatchFunc);
 // router.route('/').get(GetFunc).post(PostFunc);
 
 export { router };

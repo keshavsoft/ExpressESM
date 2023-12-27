@@ -8,8 +8,8 @@ let PostFuncRepo = ({ inDataToInsert }) => {
     return PostFuncDal({ inDataToInsert });
 };
 
-let PatchFuncRepo = ({ inDataToInsert }) => {
-    return PatchFuncDal({ inDataToInsert });
+let PatchFuncRepo = ({ UuId, inDataToInsert }) => {
+    return PatchFuncDal({ UuId, inDataToInsert });
 };
 
 export { GetFuncRepo, PostFuncRepo, PatchFuncRepo };

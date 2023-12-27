@@ -1,12 +1,14 @@
 [
   {
-    "CustomerName": "Ram",
-    "CustomerContact:": 8341177,
-    "uuidv4": "a65b837c-fbbc-444e-9741-95a63304d508"
+    "CustomerName": "Sree",
+    "CustomerContact:": 111,
+    "UuId": "2e67066d-2fbe-49a2-9873-d66523a50f21",
+    "DateTime": "2023-12-27T06:28:38.887Z"
   },
   {
-    "CustomerName": "Raja---",
-    "CustomerContact:": 111,
-    "uuidv4": "c6764683-b5b9-46e4-b4aa-644b792a8478"
+    "CustomerName": "Keshav",
+    "CustomerContact:": 999999,
+    "UuId": "018e1f06-de12-4d1b-8bea-b0d6ef8582a0",
+    "DateTime": "2023-12-27T06:28:55.708Z"
   }
 ]

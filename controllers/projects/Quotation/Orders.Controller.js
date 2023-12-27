@@ -15,7 +15,9 @@ let PostFunc = (req, res) => {
 
 let PatchFunc = (req, res) => {
     let LocalinDataToInsert = req.body.inDataToInsert;
-    let LocalFromRepo = PatchFuncRepo({ inDataToInsert: LocalinDataToInsert });
+    let LocalinParamUuId = req.params.ParamUuId;
+
+    let LocalFromRepo = PatchFuncRepo({ UuId: LocalinParamUuId, inDataToInsert: LocalinDataToInsert });
 
     res.status(200).json(LocalFromRepo);
 };

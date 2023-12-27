@@ -3,7 +3,7 @@ content-type: application/json
 
 {
     "inDataToInsert":{
-        "CustomerName":"vasu",
-        "CustomerContact:":8341177
+        "CustomerName":"Keshav",
+        "CustomerContact:":999999
     }
 }

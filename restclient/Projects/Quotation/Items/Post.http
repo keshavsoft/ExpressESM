@@ -3,7 +3,7 @@ content-type: application/json
 
 {
     "inDataToInsert":{
-        "ItemName":"pppp",
-        "Rate:":11111111
+        "ItemName":"RedMi",
+        "Rate:":15000
     }
 }
