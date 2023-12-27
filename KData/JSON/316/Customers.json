@@ -1,13 +1,13 @@
 [
   {
     "CustomerName": "Sree",
-    "CustomerContact:": 111,
+    "CustomerContact:": "111",
     "UuId": "2e67066d-2fbe-49a2-9873-d66523a50f21",
     "DateTime": "2023-12-27T06:28:38.887Z"
   },
   {
     "CustomerName": "Keshav",
-    "CustomerContact:": 999999,
+    "CustomerContact:": "999999",
     "UuId": "018e1f06-de12-4d1b-8bea-b0d6ef8582a0",
     "DateTime": "2023-12-27T06:28:55.708Z"
   }
