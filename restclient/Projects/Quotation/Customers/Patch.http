@@ -1,10 +1,9 @@
-PATCH  http://localhost:3000/Projects/Quotation/Customers
+PATCH  http://localhost:3000/Projects/Quotation/Customers/2e67066d-2fbe-49a2-9873-d66523a50f21
 content-type: application/json
 
 {
     "inDataToInsert":{
-    "uuidv4":"c6764683-b5b9-46e4-b4aa-644b792a8478",
-        "CustomerName":"Raja---",
+        "CustomerName":"Sree",
         "CustomerContact:":111
     }
 }

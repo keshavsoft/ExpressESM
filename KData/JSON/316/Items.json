@@ -1,24 +1,20 @@
 [
   {
-    "ItemName": "Mobile",
-    "ItemRate": "2000"
+    "ItemName": "Samsung",
+    "Rate:": 25000,
+    "UuId": "4cfb018d-9599-4021-92c5-98366c6b85fa",
+    "DateTime": "2023-12-27T06:02:29.004Z"
   },
   {
-    "ItemName": "samsung",
-    "ItemRate": 10000
+    "ItemName": "Oppo",
+    "Rate:": 10000,
+    "UuId": "77a43058-d289-415a-9c18-2b19b55c59c2",
+    "DateTime": "2023-12-27T06:08:12.725Z"
   },
   {
-    "ItemName": "sree",
-    "ItemRate": 20
-  },
-  {
-    "ItemName": "iphone",
-    "ItemRate": 50000
-  },
-  {
-    "ItemName": "Motorola Phone",
-    "ItemRate": null,
-    "uuidv4": "13535598-3764-435d-ad5e-c5850b617778",
-    "DateTime": "2023-12-26T16:52:20.007Z"
+    "ItemName": "Redmi",
+    "Rate:": 13000,
+    "UuId": "f1101c6d-308b-4003-ab90-dcd46f8bb335",
+    "DateTime": "2023-12-27T06:08:41.153Z"
   }
 ]

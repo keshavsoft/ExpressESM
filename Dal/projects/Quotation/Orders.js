@@ -11,8 +11,8 @@ let PostFuncDal = ({ inDataToInsert }) => {
     return StartFuncWriteFile({ inDataToInsert });
 };
 
-let PatchFuncDal = ({ inDataToInsert }) => {
-    return StartFuncUpdateFile({ inDataToInsert });
+let PatchFuncDal = ({ UuId, inDataToInsert }) => {
+    return StartFuncUpdateFile({ UuId, inDataToInsert });
 };
 
 export { GetFuncDal, PostFuncDal, PatchFuncDal };

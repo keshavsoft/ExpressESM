@@ -1,9 +1,9 @@
-POST  http://localhost:3000/Projects/Quotation/Orders
+PUT  http://localhost:3000/Projects/Quotation/Orders
 content-type: application/json
 
 {
     "inDataToInsert":{
-        "OrderaName":"Sree",
-        "Qty:":8
+        "OrderaName":"Pavan",
+        "Qty:":1
     }
 }
