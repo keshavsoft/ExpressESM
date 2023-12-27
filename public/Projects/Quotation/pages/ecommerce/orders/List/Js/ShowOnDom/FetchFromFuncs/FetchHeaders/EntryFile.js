@@ -7,8 +7,8 @@ let StartFunc = () => {
     let LocalFoam = document.forms[0];
     let LocalNerFormData = new FormData(LocalFoam);
 
-    jVarLocalBodyKeys.inDataToInsert.CustomerName = LocalNerFormData.get("CustomerName");
-    jVarLocalBodyKeys.inDataToInsert.CustomerContact = parseInt(LocalNerFormData.get("CustomerContact"));
+    jVarLocalBodyKeys.inDataToInsert.ItemName = LocalNerFormData.get("ItemName");
+    jVarLocalBodyKeys.inDataToInsert.ItemRate = parseInt(LocalNerFormData.get("ItemRate"));
     console.log("v:", jVarLocalBodyKeys);
 
     KeysJson.body = JSON.stringify(jVarLocalBodyKeys);
