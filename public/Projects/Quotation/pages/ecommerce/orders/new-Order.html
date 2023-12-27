@@ -34,13 +34,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="../../../assets/css/material-dashboard.css?v=3.0.6" rel="stylesheet" />
-    <!-- Nepcha Analytics (nepcha.com) -->
-    <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-    <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
     
+   
      <!-- side Menu -->
      <aside
      class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
@@ -133,12 +131,12 @@
  
              <!-- Customers Side Menu -->
              <li class="nav-item">
-                 <a data-bs-toggle="collapse" href="#CustomersTab" class="nav-link text-white active"
+                 <a data-bs-toggle="collapse" href="#CustomersTab" class="nav-link text-white "
                      aria-controls="componentsExamples" role="button" aria-expanded="false">
                      <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">receipt_long</i>
                      <span class="nav-link-text ms-2 ps-1">Customers</span>
                  </a>
-                 <div class="collapse show" id="CustomersTab">
+                 <div class="collapse " id="CustomersTab">
                      <ul class="nav ">
                          <li class="nav-item ">
                              <a class="nav-link text-white " href="/Projects/Quotation/pages/ecommerce/Products/new-Customer.html">
@@ -146,8 +144,8 @@
                                  <span class="sidenav-normal  ms-2  ps-1"> New Customer </span>
                              </a>
                          </li>
-                         <li class="nav-item active">
-                             <a class="nav-link text-white active"
+                         <li class="nav-item ">
+                             <a class="nav-link text-white "
                                  href="/Projects/Quotation/pages/ecommerce/Customers/Customers-list.html">
                                  <span class="sidenav-mini-icon"> A </span>
                                  <span class="sidenav-normal  ms-2  ps-1"> Show All </span>
@@ -210,18 +208,18 @@
  
              <!-- Orders side Menu -->
              <li class="nav-item">
-                 <a data-bs-toggle="collapse" href="#OrdersTab" class="nav-link text-white "
+                 <a data-bs-toggle="collapse" href="#OrdersTab" class="nav-link text-white Active"
                      aria-controls="componentsExamples" role="button" aria-expanded="false">
                      <i
                          class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">view_in_ar</i>
                      <span class="nav-link-text ms-2 ps-1">Orders</span>
                  </a>
-                 <div class="collapse " id="OrdersTab">
-                     <ul class="nav ">
-                         <li class="nav-item ">
-                             <a class="nav-link text-white " href="/Projects/Quotation/pages/ecommerce/Products/new-product.html">
+                 <div class="collapse show" id="OrdersTab">
+                     <ul class="nav active">
+                         <li class="nav-item active">
+                             <a class="nav-link text-white active" href="/Projects/Quotation/pages/ecommerce/orders/new-Order.html">
                                  <span class="sidenav-mini-icon"> N </span>
-                                 <span class="sidenav-normal  ms-2  ps-1"> New Product </span>
+                                 <span class="sidenav-normal  ms-2  ps-1"> New Order </span>
                              </a>
                          </li>
                          <li class="nav-item ">
@@ -284,9 +282,9 @@
                         </li>
                         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a>
                         </li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Products List</li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">New Product</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Products List</h6>
+                    <h6 class="font-weight-bolder mb-0">New Product</h6>
                 </nav>
                 <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
                     <a href="javascript:;" class="nav-link text-body p-0">
@@ -387,72 +385,196 @@
         </nav>
         <!-- End Navbar -->
         <div class="container-fluid py-4">
-            <div class="row">
-                <div class="col-12">
+            <div class="row min-vh-80">
+                <div class="col-lg-8 col-md-10 col-12 m-auto">
+                    <h3 class="mt-3 mb-0 text-center">Add new Product</h3>
+                    <p class="lead font-weight-normal opacity-8 mb-7 text-center">This information will let us know more
+                        about
+                        you.</p>
                     <div class="card">
-                        <!-- Card header -->
-                        <div class="card-header pb-0">
-                            <div class="d-lg-flex">
-                                <div>
-                                    <h5 class="mb-0">All Products</h5>
-                                    <p class="text-sm mb-0">
-                                        A lightweight, extendable, dependency-free javascript HTML table plugin.
-                                    </p>
-                                </div>
-                                <div class="ms-auto my-auto mt-lg-0 mt-4">
-                                    <div class="ms-auto my-auto">
-                                        <a href="./new-Customer.html" class="btn bg-gradient-primary btn-sm mb-0"
-                                            target="_blank">+&nbsp; New
-                                            Customer</a>
-                                        <button type="button" class="btn btn-outline-primary btn-sm mb-0"
-                                            data-bs-toggle="modal" data-bs-target="#import">
-                                            Import
-                                        </button>
-                                        <div class="modal fade" id="import" tabindex="-1" aria-hidden="true">
-                                            <div class="modal-dialog mt-lg-10">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="ModalLabel">Import CSV</h5>
-                                                        <i class="material-icons ms-3">file_upload</i>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>You can browse your computer for a file.</p>
-                                                        <div class="input-group input-group-dynamic mb-3">
-                                                            <label class="form-label">Browse file...</label>
-                                                            <input type="email" class="form-control"
-                                                                onfocus="focused(this)" onfocusout="defocused(this)">
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="importCheck" checked="">
-                                                            <label class="custom-control-label" for="importCheck">I
-                                                                accept the terms and
-                                                                conditions</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn bg-gradient-secondary btn-sm"
-                                                            data-bs-dismiss="modal">Close</button>
-                                                        <button type="button"
-                                                            class="btn bg-gradient-primary btn-sm">Upload</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1"
-                                            data-type="csv" type="button" name="button">Export</button>
-                                    </div>
+                        <div class="card-header p-0 position-relative mt-n5 mx-3 z-index-2">
+                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                <div class="multisteps-form__progress">
+                                    <button class="multisteps-form__progress-btn js-active" type="button"
+                                        title="Product Info">
+                                        <span>1. Product Info</span>
+                                    </button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Media">2.
+                                        Media</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Socials">3.
+                                        Socials</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Pricing">4.
+                                        Pricing</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body px-0 pb-0">
-                            <div class="table-responsive">
-                                <table class="table table-flush" id="products-list">
-
-                                </table>
-                            </div>
+                        <div class="card-body">
+                            <form class="multisteps-form__form">
+                                <!--single form panel-->
+                                <div class="multisteps-form__panel pt-3 border-radius-xl bg-white js-active"
+                                    data-animation="FadeIn">
+                                    <h5 class="font-weight-bolder">Customer Information</h5>
+                                    <div class="multisteps-form__content">
+                                        <div class="row mt-3">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="input-group input-group-dynamic">
+                                                    <label for="exampleFormControlInput1" class="form-label">Order
+                                                        Name</label>
+                                                    <input class="multisteps-form__input form-control" type="text"
+                                                        name="ItemName" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                <div class="input-group input-group-dynamic">
+                                                    <label for="exampleFormControlInput1" class="form-label">
+                                                        Rate</label>
+                                                    <input class="multisteps-form__input form-control" type="number"
+                                                        name="ItemRate" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label class="mt-4">Description</label>
+                                                <p class="form-text text-muted text-xs ms-1 d-inline">
+                                                    (optional)
+                                                </p>
+                                                <div id="edit-deschiption" class="h-50">
+                                                    <p>Some initial <strong>bold</strong> text</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 mt-sm-3 mt-5">
+                                                <label class="form-control ms-0">Category</label>
+                                                <select class="form-control" name="choices-category"
+                                                    id="choices-category">
+                                                    <option value="Choice 1" selected="">Clothing</option>
+                                                    <option value="Choice 2">Real Estate</option>
+                                                    <option value="Choice 3">Electronics</option>
+                                                    <option value="Choice 4">Furniture</option>
+                                                    <option value="Choice 5">Others</option>
+                                                </select>
+                                                <label class="form-control ms-0">Sizes</label>
+                                                <select class="form-control" name="choices-sizes" id="choices-sizes">
+                                                    <option value="Choice 1" selected="">Medium</option>
+                                                    <option value="Choice 2">Small</option>
+                                                    <option value="Choice 3">Large</option>
+                                                    <option value="Choice 4">Extra Large</option>
+                                                    <option value="Choice 5">Extra Small</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="button-row d-flex mt-4">
+                                            <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button"
+                                                title="Next">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--single form panel-->
+                                <div class="multisteps-form__panel pt-3 border-radius-xl bg-white"
+                                    data-animation="FadeIn">
+                                    <h5 class="font-weight-bolder">Media</h5>
+                                    <div class="multisteps-form__content">
+                                        <div class="row mt-3">
+                                            <div class="col-12">
+                                                <label class="form-control mb-0">Product images</label>
+                                                <div action="/file-upload" class="form-control border dropzone"
+                                                    id="productImg"></div>
+                                            </div>
+                                        </div>
+                                        <div class="button-row d-flex mt-4">
+                                            <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button"
+                                                title="Prev">Prev</button>
+                                            <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button"
+                                                title="Next">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--single form panel-->
+                                <div class="multisteps-form__panel pt-3 border-radius-xl bg-white"
+                                    data-animation="FadeIn">
+                                    <h5 class="font-weight-bolder">Socials</h5>
+                                    <div class="multisteps-form__content">
+                                        <div class="row mt-3">
+                                            <div class="col-12">
+                                                <div class="input-group input-group-dynamic">
+                                                    <label class="form-label">Shoppify Handle</label>
+                                                    <input class="multisteps-form__input form-control" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-3">
+                                                <div class="input-group input-group-dynamic">
+                                                    <label class="form-label">Facebook Account</label>
+                                                    <input class="multisteps-form__input form-control" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-3">
+                                                <div class="input-group input-group-dynamic">
+                                                    <label class="form-label">Instagram Account</label>
+                                                    <input class="multisteps-form__input form-control" type="text" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="button-row d-flex mt-4 col-12">
+                                                <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button"
+                                                    title="Prev">Prev</button>
+                                                <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next"
+                                                    type="button" title="Next">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--single form panel-->
+                                <div class="multisteps-form__panel pt-3 border-radius-xl bg-white h-100"
+                                    data-animation="FadeIn">
+                                    <h5 class="font-weight-bolder">Pricing</h5>
+                                    <div class="multisteps-form__content mt-3">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="input-group input-group-dynamic">
+                                                    <label class="form-label">Price</label>
+                                                    <input type="email" class="form-control w-100"
+                                                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <select class="form-control" name="choices-sizes" id="choices-currency">
+                                                    <option value="Choice 1" selected="">USD</option>
+                                                    <option value="Choice 2">EUR</option>
+                                                    <option value="Choice 3">GBP</option>
+                                                    <option value="Choice 4">CNY</option>
+                                                    <option value="Choice 5">INR</option>
+                                                    <option value="Choice 6">BTC</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="input-group input-group-dynamic">
+                                                    <label class="form-label">SKU</label>
+                                                    <input class="multisteps-form__input form-control" type="text" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label class="mt-4 form-label">Tags</label>
+                                                <select class="form-control" name="choices-tags" id="choices-tags"
+                                                    multiple>
+                                                    <option value="Choice 1" selected>In Stock</option>
+                                                    <option value="Choice 2">Out of Stock</option>
+                                                    <option value="Choice 3">Sale</option>
+                                                    <option value="Choice 4">Black Friday</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="button-row d-flex mt-0 mt-md-4">
+                                            <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button"
+                                                title="Prev">Prev</button>
+                                            <button class="btn bg-gradient-dark ms-auto mb-0" type="button"
+                                                id="NewSaveId" title="Send">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -607,51 +729,62 @@
     <script src="../../../assets/js/core/bootstrap.min.js"></script>
     <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="../../../assets/js/plugins/datatables.js"></script>
-    <!-- <script>
-        if (document.getElementById('products-list')) {
-            let jVarLocalTableData = [];
-            let jVarLocalFirstRow = {};
-            jVarLocalFirstRow.CustomerName = "Keshav";
-            jVarLocalFirstRow.Contact = 9898;
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-
-            const dataTableSearch = new simpleDatatables.DataTable("#products-list", {
-                searchable: false,
-                fixedHeight: true,
-                perPage: 5,
-                data: {
-                    headings: Object.keys(jVarLocalTableData[0]),
-                    data: jVarLocalTableData.map(item => Object.values(item))
-                }
-            });
-
-            document.querySelectorAll(".export").forEach(function (el) {
-                el.addEventListener("click", function (e) {
-                    var type = el.dataset.type;
-
-                    var data = {
-                        type: type,
-                        filename: "material-" + type,
-                    };
-
-                    if (type === "csv") {
-                        data.columnDelimiter = "|";
-                    }
-
-                    dataTableSearch.export(data);
-                });
+    <script src="../../../assets/js/plugins/choices.min.js"></script>
+    <script src="../../../assets/js/plugins/dropzone.min.js"></script>
+    <script src="../../../assets/js/plugins/quill.min.js"></script>
+    <script src="../../../assets/js/plugins/multistep-form.js"></script>
+    <script>
+        if (document.getElementById('edit-deschiption')) {
+            var quill = new Quill('#edit-deschiption', {
+                theme: 'snow' // Specify theme in configuration
             });
         };
-    </script> -->
+
+        if (document.getElementById('choices-category')) {
+            var element = document.getElementById('choices-category');
+            const example = new Choices(element, {
+                searchEnabled: false
+            });
+        };
+
+        if (document.getElementById('choices-sizes')) {
+            var element = document.getElementById('choices-sizes');
+            const example = new Choices(element, {
+                searchEnabled: false
+            });
+        };
+
+        if (document.getElementById('choices-currency')) {
+            var element = document.getElementById('choices-currency');
+            const example = new Choices(element, {
+                searchEnabled: false
+            });
+        };
+
+        if (document.getElementById('choices-tags')) {
+            var tags = document.getElementById('choices-tags');
+            const examples = new Choices(tags, {
+                removeItemButton: true
+            });
+
+            examples.setChoices(
+                [{
+                    value: 'One',
+                    label: 'Expired',
+                    disabled: true
+                },
+                {
+                    value: 'Two',
+                    label: 'Out of Stock',
+                    selected: true
+                }
+                ],
+                'value',
+                'label',
+                false,
+            );
+        }
+    </script>
     <!-- Kanban scripts -->
     <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
     <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
@@ -670,7 +803,7 @@
     <!-- <script src="../../../assets/js/material-dashboard.min.js?v=3.0.6"></script> -->
 
     <script src="../../../assets/js/material-dashboard.js"></script>
-    <script type="module" src="./Customers-list/Js/StartFunc.js"></script>
+    <script type="module" src="./new-Order/Js/EntryFile.js"></script>
 </body>
 
 </html>
