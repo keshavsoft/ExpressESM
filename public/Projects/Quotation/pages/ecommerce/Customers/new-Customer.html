@@ -131,15 +131,15 @@
  
              <!-- Customers Side Menu -->
              <li class="nav-item">
-                 <a data-bs-toggle="collapse" href="#CustomersTab" class="nav-link text-white active"
+                 <a data-bs-toggle="collapse" href="#CustomersTab" id="CustomerMainTabId" class="nav-link text-white active"
                      aria-controls="componentsExamples" role="button" aria-expanded="false">
                      <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">receipt_long</i>
                      <span class="nav-link-text ms-2 ps-1">Customers</span>
                  </a>
                  <div class="collapse show" id="CustomersTab">
                      <ul class="nav ">
-                         <li class="nav-item active">
-                             <a class="nav-link text-white active" href="/Projects/Quotation/pages/ecommerce/Products/new-Customer.html">
+                         <li class="nav-item " id="NewCustomerLiTagId">
+                             <a class="nav-link text-white " id="NewCustomerAnchorTagId" href="/Projects/Quotation/pages/ecommerce/Products/new-Customer.html">
                                  <span class="sidenav-mini-icon"> N </span>
                                  <span class="sidenav-normal  ms-2  ps-1"> New Customer </span>
                              </a>
@@ -803,6 +803,7 @@
     <!-- <script src="../../../assets/js/material-dashboard.min.js?v=3.0.6"></script> -->
 
     <script src="../../../assets/js/material-dashboard.js"></script>
+    <script type="module" src="./new-product/Js/headerChange.js"></script>
     <script type="module" src="./new-product/Js/EntryFile.js"></script>
 </body>
 

@@ -13,6 +13,8 @@ let jFChangeNavAnchorClass = ({ inClassName }) => {
         jVarLocalAnchorNeeded.classList.add("active");
         const myIdElement = jVarLocalAnchorNeeded.closest("li");
         const ClosesetDiv = jVarLocalAnchorNeeded.closest("div");
+
+        ClosesetDiv.previousElementSibling.classList.add("active");
         ClosesetDiv.classList.add("show")
         myIdElement.classList.add("active")
 
@@ -26,6 +28,7 @@ let jFChangeNavAnchorClass = ({ inClassName }) => {
                 jVarLocalAnchorNeeded[i].classList.add("active");
                 const myIdElement = jVarLocalAnchorNeeded.closest("li");
                 const ClosesetDiv = jVarLocalAnchorNeeded.closest("div");
+                ClosesetDiv.previousElementSibling.classList.add("active");
                 ClosesetDiv.classList.add("show")
                 myIdElement.classList.add("active")
             };
