@@ -131,12 +131,12 @@
  
              <!-- Customers Side Menu -->
              <li class="nav-item">
-                 <a data-bs-toggle="collapse" href="#CustomersTab" class="nav-link text-white "
+                 <a data-bs-toggle="collapse" href="#CustomersTab" class="nav-link text-white active"
                      aria-controls="componentsExamples" role="button" aria-expanded="false">
                      <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">receipt_long</i>
                      <span class="nav-link-text ms-2 ps-1">Customers</span>
                  </a>
-                 <div class="collapse " id="CustomersTab">
+                 <div class="collapse show" id="CustomersTab">
                      <ul class="nav ">
                          <li class="nav-item ">
                              <a class="nav-link text-white " href="/Projects/Quotation/pages/ecommerce/Products/new-Customer.html">
@@ -151,10 +151,10 @@
                                  <span class="sidenav-normal  ms-2  ps-1"> Show All </span>
                              </a>
                          </li>
-                         <li class="nav-item ">
-                             <a class="nav-link text-white " href="../ecommerce/Products/edit-product.html">
+                         <li class="nav-item active">
+                             <a class="nav-link text-white active" href="/Projects/Quotation/pages/ecommerce/Customers/edit-Customer.html">
                                  <span class="sidenav-mini-icon"> E </span>
-                                 <span class="sidenav-normal  ms-2  ps-1"> Edit Product </span>
+                                 <span class="sidenav-normal  ms-2  ps-1"> Edit Customer </span>
                              </a>
                          </li>
                          <li class="nav-item ">
@@ -208,40 +208,42 @@
  
              <!-- Orders side Menu -->
              <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#OrdersTab" class="nav-link text-white active"
-                  aria-controls="componentsExamples" role="button" aria-expanded="false">
-                  <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">view_in_ar</i>
-                  <span class="nav-link-text ms-2 ps-1">Orders</span>
-                </a>
-                <div class="collapse show" id="OrdersTab">
-                  <ul class="nav ">
-                    <li class="nav-item active">
-                      <a class="nav-link text-white active" href="/Projects/Quotation/pages/ecommerce/orders/new-Order.html">
-                        <span class="sidenav-mini-icon"> N </span>
-                        <span class="sidenav-normal  ms-2  ps-1"> New Order </span>
-                      </a>
-                    </li>
-                    <li class="nav-item ">
-                      <a class="nav-link text-white " href="/Projects/Quotation/pages/ecommerce/orders/list.html">
-                        <span class="sidenav-mini-icon"> A </span>
-                        <span class="sidenav-normal  ms-2  ps-1"> Show All </span>
-                      </a>
-                    </li>
-                    <li class="nav-item ">
-                      <a class="nav-link text-white " href="../ecommerce/Products/edit-product.html">
-                        <span class="sidenav-mini-icon"> E </span>
-                        <span class="sidenav-normal  ms-2  ps-1"> Edit Product </span>
-                      </a>
-                    </li>
-                    <li class="nav-item ">
-                      <a class="nav-link text-white " href="../ecommerce/Products/product-page.html">
-                        <span class="sidenav-mini-icon"> P </span>
-                        <span class="sidenav-normal  ms-2  ps-1"> Product Page </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+                 <a data-bs-toggle="collapse" href="#OrdersTab" class="nav-link text-white "
+                     aria-controls="componentsExamples" role="button" aria-expanded="false">
+                     <i
+                         class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">view_in_ar</i>
+                     <span class="nav-link-text ms-2 ps-1">Orders</span>
+                 </a>
+                 <div class="collapse " id="OrdersTab">
+                     <ul class="nav ">
+                         <li class="nav-item ">
+                             <a class="nav-link text-white " href="/Projects/Quotation/pages/ecommerce/Products/new-product.html">
+                                 <span class="sidenav-mini-icon"> N </span>
+                                 <span class="sidenav-normal  ms-2  ps-1"> New Product </span>
+                             </a>
+                         </li>
+                         <li class="nav-item ">
+                             <a class="nav-link text-white "
+                                 href="/Projects/Quotation/pages/ecommerce/orders/list.html">
+                                 <span class="sidenav-mini-icon"> A </span>
+                                 <span class="sidenav-normal  ms-2  ps-1"> Show All </span>
+                             </a>
+                         </li>
+                         <li class="nav-item ">
+                             <a class="nav-link text-white " href="../ecommerce/Products/edit-product.html">
+                                 <span class="sidenav-mini-icon"> E </span>
+                                 <span class="sidenav-normal  ms-2  ps-1"> Edit Product </span>
+                             </a>
+                         </li>
+                         <li class="nav-item ">
+                             <a class="nav-link text-white " href="../ecommerce/Products/product-page.html">
+                                 <span class="sidenav-mini-icon"> P </span>
+                                 <span class="sidenav-normal  ms-2  ps-1"> Product Page </span>
+                             </a>
+                         </li>
+                     </ul>
+                 </div>
+             </li>
              
  
          </ul>
@@ -416,18 +418,18 @@
                                         <div class="row mt-3">
                                             <div class="col-12 col-sm-6">
                                                 <div class="input-group input-group-dynamic">
-                                                    <label for="exampleFormControlInput1" class="form-label">Order
+                                                    <label for="exampleFormControlInput1" class="form-label">Customer
                                                         Name</label>
                                                     <input class="multisteps-form__input form-control" type="text"
-                                                        name="ItemName" />
+                                                        name="CustomerName" />
                                                 </div>
                                             </div>
                                             <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                 <div class="input-group input-group-dynamic">
                                                     <label for="exampleFormControlInput1" class="form-label">
-                                                        Rate</label>
+                                                        Contact No</label>
                                                     <input class="multisteps-form__input form-control" type="number"
-                                                        name="ItemRate" />
+                                                        name="CustomerContact" />
                                                 </div>
                                             </div>
                                         </div>
@@ -801,7 +803,7 @@
     <!-- <script src="../../../assets/js/material-dashboard.min.js?v=3.0.6"></script> -->
 
     <script src="../../../assets/js/material-dashboard.js"></script>
-    <script type="module" src="./new-Order/Js/EntryFile.js"></script>
+    <script type="module" src="./edit-Customer/Js/StartFunc.js"></script>
 </body>
 
 </html>
