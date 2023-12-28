@@ -8,6 +8,11 @@ let StartFunc = () => {
     LocalReturnData = { ...LocalFromCheck };
     LocalReturnData.KTF = false;
 
+    if (LocalFromCheck.KTF === false) {
+        LocalReturnData.KReason = "DataPkFolderPath is already present";
+        return LocalReturnData;
+    };
+
     try {
         let LocalFolderPath = `${LocalReturnData.DataPkFolderPath}`;
         let LocalFromPath = `${LocalReturnData.KDataFolderPath}/TemplateDatas/ForLowDb/316`;
