@@ -1,4 +1,4 @@
-import { GetFuncDal, PostFuncDal, PatchFuncDal } from '../../../Dal/projects/Quotation/Customers.js';
+import { GetFuncDal, PostFuncDal, PostUploadFuncDal, PatchFuncDal } from '../../../Dal/projects/Quotation/Customers.js';
 import Config from '../../../Config.json'  assert { type: 'json' };
 
 let GetFuncRepo = async () => {
@@ -12,8 +12,12 @@ let PostFuncRepo = ({ inDataToInsert }) => {
     return PostFuncDal({ inDataToInsert });
 };
 
+let PostUploadFuncRepo = ({ inDataToInsert }) => {
+    return PostUploadFuncDal({ inDataToInsert });
+};
+
 let PatchFuncRepo = ({ UuId, inDataToInsert }) => {
     return PatchFuncDal({ UuId, inDataToInsert });
 };
 
-export { GetFuncRepo, PostFuncRepo, PatchFuncRepo };
+export { GetFuncRepo, PostFuncRepo, PostUploadFuncRepo, PatchFuncRepo };
