@@ -13,3 +13,4 @@ steps for development
 
 1.   npm i
 2.   npm run start
+3.  run batchfiles needed for UI, html files will be copied from ExpressESMStatic:repo

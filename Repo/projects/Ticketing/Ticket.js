@@ -1,12 +1,15 @@
-import { GetFuncDal, PostFuncDal } from '../../../Dal/projects/Ticketing/Ticket.js';
+import { GetFuncDal, PostFuncDal, PatchFuncDal } from '../../../Dal/projects/Quotation/Orders.js';
 
-let GetFuncRepo = async () => {
-    return await GetFuncDal();
+let GetFuncRepo = () => {
+    return GetFuncDal();
 };
 
-let PostFuncRepo = () => {
-
-    return PostFuncDal();
+let PostFuncRepo = ({ inDataToInsert }) => {
+    return PostFuncDal({ inDataToInsert });
 };
 
-export { GetFuncRepo, PostFuncRepo };
+let PatchFuncRepo = ({ UuId, inDataToInsert }) => {
+    return PatchFuncDal({ UuId, inDataToInsert });
+};
+
+export { GetFuncRepo, PostFuncRepo, PatchFuncRepo };

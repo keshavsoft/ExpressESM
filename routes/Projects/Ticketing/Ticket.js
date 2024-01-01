@@ -2,10 +2,11 @@ import express from 'express';
 
 var router = express.Router();
 
-import { GetFunc, PostFunc } from '../../../controllers/projects/Ticketing/Ticket.Controller.js';
+import { GetFunc, PostFunc, PatchFunc } from '../../../controllers/projects/Quotation/Orders.Controller.js';
 
 router.get('/', GetFunc);
 router.post('/', PostFunc);
+router.patch('/:ParamUuId', PatchFunc);
 // router.route('/').get(GetFunc).post(PostFunc);
 
 export { router };

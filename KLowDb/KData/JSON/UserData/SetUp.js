@@ -9,8 +9,9 @@ let StartFunc = () => {
     LocalReturnData.KTF = false;
 
     if (LocalFromCheck.KTF === false) {
-        LocalReturnData.KReason = "DataPkFolderPath is already present";
-        return LocalReturnData;
+        fs.mkdirSync(LocalReturnData.DataPkFolderPath);
+        // LocalReturnData.KReason = "DataPkFolderPath is already present";
+        // return LocalReturnData;
     };
 
     try {

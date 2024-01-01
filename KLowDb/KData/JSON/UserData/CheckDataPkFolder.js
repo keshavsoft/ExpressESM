@@ -10,10 +10,7 @@ let ForExistence = () => {
 
     LocalReturnData.DataPkFolderPath = `${LocalReturnData.JsonFolderPath}/316`;
 
-
-
     try {
-        fs.mkdirSync(LocalReturnData.DataPkFolderPath);
         if (fs.statSync(LocalReturnData.DataPkFolderPath).isDirectory()) {
             LocalReturnData.KTF = true;
         } else {
